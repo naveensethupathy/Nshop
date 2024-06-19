@@ -6,6 +6,7 @@ import "./assets/styles/index.css";
 import App from "./App";
 
 import store from "./store";
+import {HelmetProvider }from "react-helmet-async";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -38,6 +39,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<HomeScreen />} />
       <Route path="/page/:pageNumber" element={<HomeScreen />} />
+      <Route path="/search/:keyword" element={<HomeScreen />} />
+      <Route path="/search/:keyword/page/:pageNumber" element={<HomeScreen />} />
       <Route path="/product/:id" element={<ProductScreen />} />
       <Route path="/cart" element={<CartScreen />} />
       <Route path="/login" element={<LoginScreen />} />
@@ -65,12 +68,14 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+  <HelmetProvider>
     <Provider store={store}>
     <PayPalScriptProvider deferLoading={true}>
     <RouterProvider router={router}></RouterProvider>
     </PayPalScriptProvider>
-      
+
     </Provider>
+  </HelmetProvider> 
   </React.StrictMode>
 );
 

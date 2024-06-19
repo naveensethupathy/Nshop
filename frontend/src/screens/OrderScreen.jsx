@@ -212,15 +212,15 @@ const OrderScreen = () => {
                           onClick={onApproveTest}
                           styles={{ marginBottom: "10px" }}
                         >
-                          Test Pay Order
+                           Pay Order
                         </Button>
-                        <div>
+                        {/* <div>
                           <PayPalButtons>
                             createOrder={createOrder}
                             onApprove={onApprove}
                             onError={onError}
                           </PayPalButtons>
-                        </div>
+                        </div> */}
                       </div>
                     )}
                   </ListGroup.Item>
