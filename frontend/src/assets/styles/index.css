@@ -1,7 +1,17 @@
+
 main {
   min-height: 80vh;
+  
 }
-
+html {
+  scrollbar-gutter: stable;
+}
+body{
+  overflow-y: scroll;
+}
+h3{
+  color: #3A4750;
+}
 .rating span {
   margin: 0.1rem;
 }
@@ -37,6 +47,7 @@ table th {
   background: #f4f4f4;
   padding: 10px;
   border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .review button {
@@ -50,4 +61,7 @@ table th {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
+}
+.productImage{
+  border-radius: 16px;
 }
